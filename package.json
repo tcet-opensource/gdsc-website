@@ -17,6 +17,7 @@
     "@testing-library/user-event": "^14.4.3",
     "aos": "^2.3.4",
     "bootstrap": "5.2.0",
+    "caniuse-lite": "^1.0.30001541",
     "framer-motion": "^7.2.1",
     "luxon": "^3.0.3",
     "mdb-react-ui-kit": "^4.2.0",
