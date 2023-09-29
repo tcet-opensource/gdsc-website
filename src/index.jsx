@@ -7,14 +7,14 @@ import { StyledEngineProvider } from "@mui/material";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "aos/dist/aos.css";
 
 ReactDOM.render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
-      <Router>
+      <Router basename={window.location.pathname || ""}>
         <App />
       </Router>
     </StyledEngineProvider>
