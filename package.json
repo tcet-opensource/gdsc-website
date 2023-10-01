@@ -1,8 +1,8 @@
 {
   "name": "gdsctcet",
   "version": "2.0.0",
-  "author": "Wilfred Almeida",
-  "homepage": "http://www.gdsctcet.tech/",
+  "author": "GDSC TEAM",
+  "homepage": "https://harshau007.github.io/gdsc-website/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
