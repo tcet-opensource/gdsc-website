@@ -22,6 +22,7 @@ export default function Footer() {
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
+                className='flex justify-center'
               >
                 <img src={logo} alt="logo" style={{ maxWidth: '80%' }} />
               </motion.div>
