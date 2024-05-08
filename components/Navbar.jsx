@@ -1,10 +1,5 @@
 "use client";
-// import localFont from "next/font/local";
 import React, { useState } from "react";
-
-// const sansationFont = localFont({
-//   src: "../fonts/sansation/Sansation_Regular.ttf",
-// });
 
 export default function Navbar({ y }) {
   const [toggle, setToggle] = useState(false);
@@ -34,10 +29,12 @@ export default function Navbar({ y }) {
           <a href="/events">Events</a>
         </div>
         <a
-          href="/features"
-          className="text-center border-[1.5px] border-solid border-[#494949] rounded-3xl px-9 py-1.5 bg-gradient-to-r from-black to-[#333131]"
+          href="https://gdsc.community.dev/thakur-college-of-engineering-and-technology-mumbai-india/"
+          target="_blank"
+          className="text-center border-[1.5px] border-solid border-[#494949] rounded-3xl px-6 py-1.5 bg-gradient-to-r from-black to-[#333131]"
         >
-          Features
+          <img src="/gdscLogo.png" alt="GDSC Logo" className="w-[25px] h-[15px] inline-block mr-2" />
+          Community
         </a>
       </div>
       <div className="sm:hidden block z-40 pr-10" onClick={handleClick}>
@@ -58,10 +55,12 @@ export default function Navbar({ y }) {
         <a href="/team">Team</a>
         <a href="/events">Events</a>
         <a
-          href="/features"
-          className="text-center border-[1.5px] border-solid border-[#494949] rounded-3xl px-9 py-1.5 bg-gradient-to-r from-black to-[#333131]"
+          href="https://gdsc.community.dev/thakur-college-of-engineering-and-technology-mumbai-india/"
+          target="_blank"
+          className="text-center border-[1.5px] border-solid border-[#494949] rounded-3xl px-6 py-1.5 bg-gradient-to-r from-black to-[#333131] flex gap-2 items-center justify-center"
         >
-          Features
+          <img src="/gdscLogo.png" alt="GDSC Logo" className="w-[25px] h-[15px]" />
+          Community
         </a>
       </div>
     </div>
