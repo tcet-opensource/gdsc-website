@@ -3,20 +3,20 @@ import Hero from "@/components/Home/Hero";
 import Metrics from "@/components/Home/Metrics";
 import NotableEvents from "@/components/Home/NotableEvents";
 import Sponsors from "@/components/Home/Sponsors";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 
 export const metadata = {
   title: "GDSC-TCET",
   description: "Google Developer Student Clubs - TCET",
 };
 
-const oxygenFont = localFont({
-  src: "../fonts/Oxygen/Oxygen-Regular.ttf",
-});
+// const oxygenFont = localFont({
+//   src: "../fonts/Oxygen/Oxygen-Regular.ttf",
+// });
 
 export default function Home() {
   return (
-    <div className={oxygenFont.className}>
+    <div>
       <Hero />
       <NotableEvents />
       <About />

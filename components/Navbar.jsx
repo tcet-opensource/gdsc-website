@@ -1,10 +1,10 @@
 "use client";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import React, { useState } from "react";
 
-const sansationFont = localFont({
-  src: "../fonts/sansation/Sansation_Regular.ttf",
-});
+// const sansationFont = localFont({
+//   src: "../fonts/sansation/Sansation_Regular.ttf",
+// });
 
 export default function Navbar({ y }) {
   const [toggle, setToggle] = useState(false);
@@ -12,9 +12,7 @@ export default function Navbar({ y }) {
   const handleClick = () => setToggle(!toggle);
   return (
     <div
-      className={`fixed top-0 w-full z-40 flex items-center justify-between sm:px-16 px-0 sm:py-8 py-6 border-b-[1px] border-b-solid ${
-        sansationFont.className
-      } ${
+      className={`mainNav fixed top-0 w-full z-40 flex items-center justify-between sm:px-16 px-0 sm:py-8 py-6 border-b-[1px] border-b-solid ${
         y > 0
           ? !toggle
             ? "bg-black border-[#494949]"

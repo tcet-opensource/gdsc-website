@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Oxygen';
+    src: local('Oxygen-Regular'), url('../public/fonts/oxygen/Oxygen-Regular.otf')  format('truetype');
+}
+
+@font-face {
+    font-family: 'Sansation';
+    src: local('Sansation_Regular'), url('../public/fonts/sansation/Sansation_Regular.otf')  format('truetype');
+}
+
+body {
+    font-family: 'Oxygen';
+}
+
+.mainNav {
+    font-family: 'Sansation';
+}

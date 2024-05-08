@@ -1,12 +1,12 @@
 "use client";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   function goTop() {
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   }, [onScroll]);
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <div
           className={
             "fixed bottom-0 right-0 z-[21] duration-200 mb-10 mr-10" +
