@@ -10,12 +10,12 @@ export default function Footer() {
       />
       <footer className="bg-black text-white border-t-[1px] border-t-solid border-[#494949]">
         <div className="container mx-auto py-8">
-          <div className="flex flex-col gap-4 lg:flex-row lg:justify-between sm:items-start items-center">
-            <div className="flex flex-col sm:items-start items-center gap-4">
+          <div className="flex flex-col gap-4 lg:flex-row lg:justify-between lg:items-start items-center">
+            <div className="flex flex-col lg:items-start items-center gap-4">
               <h1 className="text-2xl font-bold">GDSC-TCET</h1>
               <p className="text-sm">Google Developer Student Clubs - TCET</p>
             </div>
-            <div className="flex flex-col sm:items-start items-center gap-4">
+            <div className="flex flex-col lg:items-start items-center gap-4">
               <h1 className="text-xl font-bold">Contact</h1>
               <p className="text-sm">
                 Thakur College of Engineering and Technology
@@ -23,7 +23,7 @@ export default function Footer() {
               <p className="text-sm">Kandivali, Mumbai</p>
               <p className="text-sm">Maharashtra, India</p>
             </div>
-            <div className="flex flex-col sm:items-start items-center gap-4">
+            <div className="flex flex-col lg:items-start items-center gap-4">
               <h1 className="text-xl font-bold">Social</h1>
               <div className="flex gap-4">
                 <a
