@@ -30,7 +30,7 @@ export default function About() {
             src="/Home/image1.png"
             alt="gdscImg"
           />
-          <span className="absolute bottom-10 left-[38%] text-bold text-2xl">
+          <span className="absolute bottom-10 sm:left-[38%] left-[30%] text-bold text-2xl">
             GDSC 23-24
           </span>
         </div>

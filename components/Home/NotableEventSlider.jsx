@@ -12,7 +12,7 @@ export default function NotableEventSlider() {
           <SliderButtons />
           {sliderDetails.map((card, i) => (
             <SwiperSlide key={i}>
-              <div className="flex xl:flex-row flex-col gap-14">
+              <div className="flex xl:flex-row flex-col xl:items-start items-center gap-14">
                 <div className="flex flex-col gap-3">
                   <h1 className="font-bold text-4xl xl:text-left text-center">
                     {card.title + "-" + Number(i + 1)}
