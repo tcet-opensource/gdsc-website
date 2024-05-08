@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import React, { useState } from "react";
 
 const sansationFont = localFont({
-  src: "../public/fonts/sansation/Sansation_Regular.ttf",
+  src: "../fonts/sansation/Sansation_Regular.ttf",
 });
 
 export default function Navbar({ y }) {

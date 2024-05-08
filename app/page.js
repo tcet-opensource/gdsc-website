@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 const oxygenFont = localFont({
-  src: "../public/fonts/Oxygen/Oxygen-Regular.ttf",
+  src: "../fonts/Oxygen/Oxygen-Regular.ttf",
 });
 
 export default function Home() {
