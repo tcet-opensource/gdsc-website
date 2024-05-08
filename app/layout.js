@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   function goTop() {
     document.body.scrollIntoView();
   }
-  const [y, setY] = useState(0)
+  const [y, setY] = useState(0);
   const onScroll = () => {
     if (typeof window !== "undefined") {
       let y = window.scrollY;
@@ -25,15 +25,17 @@ export default function RootLayout({ children }) {
       window.addEventListener("scroll", onScroll);
     }
     return () => window.removeEventListener("scroll", onScroll);
-  }, [onScroll])
+  }, [onScroll]);
   return (
     <html lang="en">
       <body className={inter.className}>
-      <div
-          className={"fixed bottom-0 right-0 z-[21] duration-200 mb-10 mr-10" +
+        <div
+          className={
+            "fixed bottom-0 right-0 z-[21] duration-200 mb-10 mr-10" +
             (y > 0
               ? " opacity-full pointer-events-auto"
-              : " opacity-0 pointer-events-none")}
+              : " opacity-0 pointer-events-none")
+          }
         >
           <button
             onClick={goTop}

@@ -53,19 +53,19 @@ export default function SponsorSlider() {
 
   return (
     <main className="py-8">
-        <div
+      <div
         className="overflow-x-hidden flex"
         // style={{ WebkitOverflowScrolling: "touch" }}
       >
-      <motion.div
-        className="flex sm:gap-40 gap-20"
-        ref={ref}
-        style={{ x: xTranslation }}
-      >
-        {[...images, ...images].map((item, idx) => (
-          <SponsorSliderCard image={item.img} key={idx} />
-        ))}
-      </motion.div>
+        <motion.div
+          className="flex sm:gap-40 gap-20"
+          ref={ref}
+          style={{ x: xTranslation }}
+        >
+          {[...images, ...images].map((item, idx) => (
+            <SponsorSliderCard image={item.img} key={idx} />
+          ))}
+        </motion.div>
       </div>
     </main>
   );

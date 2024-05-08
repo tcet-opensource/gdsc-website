@@ -12,11 +12,20 @@ export default function Navbar({ y }) {
   const handleClick = () => setToggle(!toggle);
   return (
     <div
-      className={`fixed top-0 w-full z-40 flex items-center justify-between sm:px-16 px-0 sm:py-8 py-6 border-b-[1px] border-b-solid ${sansationFont.className} ${
-        y > 0 ? !toggle ? "bg-black border-[#494949]" : "bg-black border-transparent" : "bg-transparent border-transparent"
+      className={`fixed top-0 w-full z-40 flex items-center justify-between sm:px-16 px-0 sm:py-8 py-6 border-b-[1px] border-b-solid ${
+        sansationFont.className
+      } ${
+        y > 0
+          ? !toggle
+            ? "bg-black border-[#494949]"
+            : "bg-black border-transparent"
+          : "bg-transparent border-transparent"
       }`}
     >
-      <a href="/" className="flex flex-col items-center sm:z-0 z-40 sm:pl-0 pl-10">
+      <a
+        href="/"
+        className="flex flex-col items-center sm:z-0 z-40 sm:pl-0 pl-10"
+      >
         <span className="font-bold text-xl">GDSC</span>
         <span className="text-[#A7A7A7] text-sm">TCET</span>
       </a>

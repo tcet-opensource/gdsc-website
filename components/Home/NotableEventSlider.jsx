@@ -14,17 +14,15 @@ export default function NotableEventSlider() {
             <SwiperSlide key={i}>
               <div className="flex xl:flex-row flex-col gap-14">
                 <div className="flex flex-col gap-3">
-                  <h1 className="font-bold text-4xl xl:text-left text-center">{card.title + "-" + Number(i+1)}</h1>
+                  <h1 className="font-bold text-4xl xl:text-left text-center">
+                    {card.title + "-" + Number(i + 1)}
+                  </h1>
                   <p className="text-[#7b7b7b] text-base md:w-[595px] w-auto xl:text-left text-center">
                     {card.desc}
                   </p>
                 </div>
                 <div>
-                  <img
-                    className="rounded-md"
-                    src={card.img}
-                    alt="Event1"
-                  />
+                  <img className="rounded-md" src={card.img} alt="Event1" />
                 </div>
               </div>
             </SwiperSlide>

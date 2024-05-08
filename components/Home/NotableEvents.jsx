@@ -4,7 +4,11 @@ import NotableEventSlider from "./NotableEventSlider";
 export default function NotableEvents() {
   return (
     <div className="relative">
-      <img className="sm:block hidden absolute -top-40" src="Home/EllipseGrad1.svg" alt="Ellipse" />
+      <img
+        className="sm:block hidden absolute -top-40"
+        src="Home/EllipseGrad1.svg"
+        alt="Ellipse"
+      />
       <div className="sm:mt-36 mt-28 flex justify-center">
         <div className="flex flex-col gap-7">
           <div className="flex gap-4 xl:justify-start justify-center items-center ml-2">
