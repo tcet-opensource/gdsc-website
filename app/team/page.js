@@ -8,27 +8,443 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-const page = () => {
-  const teamData = [
-    "Leads",
-    "Technical",
-    "Secretariat",
-    "Logistics",
-    "Event",
-    "Marketing",
-    "Press",
-    "Outreach",
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Image from "next/image";
+
+function CarouselDemo() {
+  const imageArray = [
+    "/Team/mobile-team/Frame1.svg",
+    "/Team/mobile-team/Frame2.svg",
+    "/Team/mobile-team/Frame3.svg",
   ];
   return (
+    <Carousel
+      opts={{
+        align: "start",
+        loop: true,
+      }}
+      className="w-full bg-transparent"
+    >
+      <CarouselContent className="bg-transparent">
+        {imageArray.map((index) => (
+          <CarouselItem key={index}>
+            <div className="p-1">
+              <Card className="w-full h-full bg-transparent border-0">
+                <CardContent className="flex aspect-video bg-transparent items-center justify-center mx-auto">
+                  <Image
+                    src={index}
+                    alt="Team Member"
+                    width={0}
+                    height={0}
+                    className="object-cover h-full w-full rounded-xl items-center"
+                  />
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
+  );
+}
+const page = () => {
+  const teamDataObject = {
+    Leads: [
+      {
+        name: "Vansh Baghel",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Change is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+    ],
+    Technical: [
+      {
+        name: "Vansh Baghel",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+    ],
+    Secretariat: [
+      {
+        name: "Vansh Baghel",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+    ],
+    Logistics: [
+      {
+        name: "Vansh Baghel",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+    ],
+
+    Event: [
+      {
+        name: "Vansh Baghel",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+    ],
+
+    Marketing: [
+      {
+        name: "Vansh Baghel",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+    ],
+
+    Press: [
+      {
+        name: "Vansh Baghel",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+    ],
+
+    Outreach: [
+      {
+        name: "Vansh Baghel",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Growth is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+      {
+        name: "Ritik Jain",
+        role: "Lead",
+        quote: "Change is painful, but what is worse is staying the same.",
+        socials: [
+          {
+            icon: "Team/Vectorgithub.svg",
+            link: "#",
+          },
+          {
+            icon: "Team/Vectorinstagram.svg",
+            link: "#",
+          },
+        ],
+      },
+    ],
+  };
+  return (
     <div className="flex flex-col mb-0">
-      <div className="relative  mt-0 sm:mt-[120px] sm:mb-[200px]">
+      <div className="relative mt-0 sm:mt-[120px] sm:mb-[200px]">
         <img
-          src="/Team/Frame14.svg "
-          className=" w-full absolute sm:block hidden"
+          src="/Team/Frame14.svg"
+          className="w-full absolute sm:block hidden"
           alt="Line1"
         />
-        <div className="flex flex-col mt-56 gap-8 ">
+        <div className="flex flex-col mt-36 sm:mt-56 gap-8 ">
           <div className="flex flex-col items-center justify-center gap-5">
+            <div className="block sm:hidden">
+              <CarouselDemo />
+            </div>
             <div className="sm:w-auto w-[300px] text-center px-8 py-2.5 sm:rounded-3xl rounded-full border-[1.5px] border-solid border-[#9f9f9f] border-b-[#7b7a7a] border-r-[#939191] border-l-[#939191] text-[#9f9f9f]">
               GDSC-TCET
             </div>
@@ -40,500 +456,79 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="flex  ml-14 gap-10 mt-36 ">
+      <div className="flex flex-col items-center gap-10 mt-12 sm:mt-36 px-4 sm:px-0">
         <Tabs
           defaultValue="Leads"
-          className="w-[400px] relative bg-transparent w-full "
+          className="w-full max-w-5xl relative bg-transparent"
         >
-          <TabsList className="bg-transparent justify-end gap-6">
-            <TabsTrigger
-              value="Leads"
-              className="rounded-3xl rounded-full  bg-gradient-to-r from-[teambuttonfrom] to-[teambuttonto]"
-            >
-              Leads
-            </TabsTrigger>
-            <TabsTrigger
-              value="Technical"
-              className="rounded-3xl rounded-full  bg-gradient-to-r from-[teambuttonfrom] to-[teambuttonto]"
-            >
-              Technical
-            </TabsTrigger>
-            <TabsTrigger
-              value="Secretariat"
-              className="rounded-3xl rounded-full  bg-gradient-to-r from-[teambuttonfrom] to-[teambuttonto]"
-            >
-              Secretariat
-            </TabsTrigger>
-            <TabsTrigger
-              value="Logistics"
-              className="rounded-3xl rounded-full  bg-gradient-to-r from-[teambuttonfrom] to-[teambuttonto]"
-            >
-              Logistics
-            </TabsTrigger>
-            <TabsTrigger
-              value="Event"
-              className="rounded-3xl rounded-full  bg-gradient-to-r from-[teambuttonfrom] to-[teambuttonto]"
-            >
-              Event
-            </TabsTrigger>
-            <TabsTrigger
-              value="Marketing"
-              className="rounded-3xl rounded-full  bg-gradient-to-r from-[teambuttonfrom] to-[teambuttonto]"
-            >
-              Marketing
-            </TabsTrigger>
-            <TabsTrigger
-              value="Press"
-              className="rounded-3xl rounded-full  bg-gradient-to-r from-[teambuttonfrom] to-[teambuttonto]"
-            >
-              Press
-            </TabsTrigger>
-            <TabsTrigger
-              value="Outreach"
-              className="rounded-3xl rounded-full  bg-gradient-to-r from-[teambuttonfrom] to-[teambuttonto]"
-            >
-              Outreach
-            </TabsTrigger>
+          <TabsList className="bg-transparent justify-center gap-6 flex-wrap hidden sm:flex">
+            {Object.keys(teamDataObject).map((team) => (
+              <TabsTrigger
+                key={team}
+                value={team}
+                className="rounded-3xl bg-gradient-to-r from-[teambuttonfrom] to-[teambuttonto] px-4 py-2"
+              >
+                {team}
+              </TabsTrigger>
+            ))}
           </TabsList>
-          <TabsContent value="Leads" className=" items-center  rounded-lg ">
-            <div className="grid grid-cols-3 gap-40 ml-14 mt-36 mr-14 mb-8 ">
-              {teamData.map((team) => (
-                <Card
-                  x-chunk="dashboard-01-chunk-3"
-                  key={team}
-                  className="h-[436px] w-[346px] bg-[#03050C]"
-                >
-                  <CardContent>
-                    <div className="grid gap-9 pt-[22px] pr-[25px] pl-[25px] pb-[22px] justify-center">
-                      <div className="flex-col relative  w-[289px] h-[221px] border-[#393939] border-[3px] rounded-lg">
-                        <img
-                          src="/Team/image8.png"
-                          alt="Team member"
-                          className="rounded-lg absolute z-0 border-[#393939]"
-                        />
-                        <div className="absolute bottom-7 left-2 right-0 z-10 text-start">
-                          <div className="font-medium text-white">
-                            Vansh Baghel
-                          </div>
-                          <div className="text-sm text-transparent bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                            Lead
-                          </div>
-                        </div>
-                      </div>
-                      <div className="text-sm mx-auto text-transparent justify-center  text-center w-[200px] h-[54px] bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                        “ Growth is painful, but what is worse is staying the
-                        same.“
-                      </div>
-                      <div className="grid grid-cols-5 gap-[14px] w-[158px] h-[24px] mx-auto  items-center">
-                        <div className="">
-                          <img src="Team/Vectorgithub.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorinstagram.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/VectorX.svg"></img>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-              {/* Add more cards as needed */}
-            </div>
-          </TabsContent>
-          <TabsContent
-            value="Technical"
-            className="fle items-center  rounded-lg "
-          >
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3  ml-14 mt-36 mr-14 mb-8">
-              {teamData.map((team) => (
-                <Card
-                  x-chunk="dashboard-01-chunk-3"
-                  key={team}
-                  className="h-[436px] w-[346px] bg-[#03050C]"
-                >
-                  <CardContent>
-                    <div className="grid gap-9 pt-[22px] pr-[25px] pl-[25px] pb-[22px] justify-center">
-                      <div className="flex-col relative  w-[289px] h-[221px] border-[#393939] border-[3px] rounded-lg">
-                        <img
-                          src="/Team/image8.png"
-                          alt="Team member"
-                          className="rounded-lg absolute z-0 border-[#393939]"
-                        />
-                        <div className="absolute bottom-7 left-2 right-0 z-10 text-start">
-                          <div className="font-medium text-white">
-                            Vansh Baghel
-                          </div>
-                          <div className="text-sm text-transparent bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                            Lead
+          <TabsList className="bg-transparent justify-center gap-6 flex-wrap block sm:hidden mb-16 mx-auto ">
+            {Object.keys(teamDataObject).map((team) => (
+              <TabsTrigger
+                key={team}
+                value={team}
+                className="rounded-3xl bg-gradient-to-r from-[teambuttonfrom] to-[teambuttonto] px-4 py-2"
+              >
+                {team}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+          {Object.keys(teamDataObject).map((team) => (
+            <TabsContent
+              key={team}
+              value={team}
+              className="items-center rounded-lg mt-8"
+            >
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {teamDataObject[team].map((member) => (
+                  <Card
+                    key={member}
+                    className="h-[436px] w-full bg-[#03050C] mx-auto"
+                  >
+                    <CardContent>
+                      <div className="grid gap-9 pt-[22px] pr-[25px] pl-[25px] pb-[22px] justify-center">
+                        <div className="flex-col relative w-full h-[221px] border-[#393939] border-[3px] rounded-lg">
+                          <img
+                            src="/Team/image8.png"
+                            alt="Team member"
+                            className="rounded-lg absolute w-full h-full object-cover border-[#393939]"
+                          />
+                          <div className="absolute bottom-7 left-2 right-0 z-10 text-start">
+                            <div className="font-medium text-white">
+                              {member["name"]}
+                            </div>
+                            <div className="text-sm text-transparent bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
+                              {member["role"]}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div className="text-sm mx-auto text-transparent justify-center  text-center w-[200px] h-[54px] bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                        “ Growth is painful, but what is worse is staying the
-                        same.“
-                      </div>
-                      <div className="grid grid-cols-5 gap-[14px] w-[158px] h-[24px] mx-auto  items-center">
-                        <div className="">
-                          <img src="Team/Vectorgithub.svg"></img>
+                        <div className="text-sm mx-auto text-transparent justify-center text-center w-[200px] h-[54px] bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
+                          {member["quote"]}
                         </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorinstagram.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/VectorX.svg"></img>
+                        <div className="grid grid-cols-5 gap-[14px] w-[158px] h-[24px] mx-auto items-center">
+                          <img src="Team/Vectorgithub.svg" alt="GitHub" />
+                          <img src="Team/Vectorseperate.svg" alt="Seperate" />
+                          <img src="Team/Vectorinstagram.svg" alt="Instagram" />
+                          <img src="Team/Vectorseperate.svg" alt="Seperate" />
+                          <img src="Team/VectorX.svg" alt="X" />
                         </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-              {/* Add more cards as needed */}
-            </div>
-          </TabsContent>
-          <TabsContent
-            value="Secretariat"
-            className="fle items-center  rounded-lg "
-          >
-            <div className="grid grid-cols-3 gap-10 ml-14 mt-36 mr-14 mb-8">
-              {teamData.map((team) => (
-                <Card
-                  x-chunk="dashboard-01-chunk-3"
-                  key={team}
-                  className="h-[436px] w-[346px] bg-[#03050C]"
-                >
-                  <CardContent>
-                    <div className="grid gap-9 pt-[22px] pr-[25px] pl-[25px] pb-[22px] justify-center">
-                      <div className="flex-col relative  w-[289px] h-[221px] border-[#393939] border-[3px] rounded-lg">
-                        <img
-                          src="/Team/image8.png"
-                          alt="Team member"
-                          className="rounded-lg absolute z-0 border-[#393939]"
-                        />
-                        <div className="absolute bottom-7 left-2 right-0 z-10 text-start">
-                          <div className="font-medium text-white">
-                            Vansh Baghel
-                          </div>
-                          <div className="text-sm text-transparent bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                            Lead
-                          </div>
-                        </div>
-                      </div>
-                      <div className="text-sm mx-auto text-transparent justify-center  text-center w-[200px] h-[54px] bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                        “ Growth is painful, but what is worse is staying the
-                        same.“
-                      </div>
-                      <div className="grid grid-cols-5 gap-[14px] w-[158px] h-[24px] mx-auto  items-center">
-                        <div className="">
-                          <img src="Team/Vectorgithub.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorinstagram.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/VectorX.svg"></img>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-              {/* Add more cards as needed */}
-            </div>
-          </TabsContent>
-          <TabsContent
-            value="Logistics"
-            className="fle items-center  rounded-lg "
-          >
-            <div className="grid grid-cols-3 gap-10 ml-14 mt-36 mr-14 mb-8">
-              {teamData.map((team) => (
-                <Card
-                  x-chunk="dashboard-01-chunk-3"
-                  key={team}
-                  className="h-[436px] w-[346px] bg-[#03050C]"
-                >
-                  <CardContent>
-                    <div className="grid gap-9 pt-[22px] pr-[25px] pl-[25px] pb-[22px] justify-center">
-                      <div className="flex-col relative  w-[289px] h-[221px] border-[#393939] border-[3px] rounded-lg">
-                        <img
-                          src="/Team/image8.png"
-                          alt="Team member"
-                          className="rounded-lg absolute z-0 border-[#393939]"
-                        />
-                        <div className="absolute bottom-7 left-2 right-0 z-10 text-start">
-                          <div className="font-medium text-white">
-                            Vansh Baghel
-                          </div>
-                          <div className="text-sm text-transparent bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                            Lead
-                          </div>
-                        </div>
-                      </div>
-                      <div className="text-sm mx-auto text-transparent justify-center  text-center w-[200px] h-[54px] bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                        “ Growth is painful, but what is worse is staying the
-                        same.“
-                      </div>
-                      <div className="grid grid-cols-5 gap-[14px] w-[158px] h-[24px] mx-auto  items-center">
-                        <div className="">
-                          <img src="Team/Vectorgithub.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorinstagram.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/VectorX.svg"></img>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-              {/* Add more cards as needed */}
-            </div>
-          </TabsContent>
-          <TabsContent value="Event" className="fle items-center  rounded-lg ">
-            <div className="grid grid-cols-3 gap-10 ml-14 mt-36 mr-14 mb-8">
-              {teamData.map((team) => (
-                <Card
-                  x-chunk="dashboard-01-chunk-3"
-                  key={team}
-                  className="h-[436px] w-[346px] bg-[#03050C]"
-                >
-                  <CardContent>
-                    <div className="grid gap-9 pt-[22px] pr-[25px] pl-[25px] pb-[22px] justify-center">
-                      <div className="flex-col relative  w-[289px] h-[221px] border-[#393939] border-[3px] rounded-lg">
-                        <img
-                          src="/Team/image8.png"
-                          alt="Team member"
-                          className="rounded-lg absolute z-0 border-[#393939]"
-                        />
-                        <div className="absolute bottom-7 left-2 right-0 z-10 text-start">
-                          <div className="font-medium text-white">
-                            Vansh Baghel
-                          </div>
-                          <div className="text-sm text-transparent bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                            Lead
-                          </div>
-                        </div>
-                      </div>
-                      <div className="text-sm mx-auto text-transparent justify-center  text-center w-[200px] h-[54px] bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                        “ Growth is painful, but what is worse is staying the
-                        same.“
-                      </div>
-                      <div className="grid grid-cols-5 gap-[14px] w-[158px] h-[24px] mx-auto  items-center">
-                        <div className="">
-                          <img src="Team/Vectorgithub.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorinstagram.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/VectorX.svg"></img>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-              {/* Add more cards as needed */}
-            </div>
-          </TabsContent>
-          <TabsContent
-            value="Marketing"
-            className="fle items-center  rounded-lg "
-          >
-            <div className="grid grid-cols-3 gap-10 ml-14 mt-36 mr-14 mb-8">
-              {teamData.map((team) => (
-                <Card
-                  x-chunk="dashboard-01-chunk-3"
-                  key={team}
-                  className="h-[436px] w-[346px] bg-[#03050C]"
-                >
-                  <CardContent>
-                    <div className="grid gap-9 pt-[22px] pr-[25px] pl-[25px] pb-[22px] justify-center">
-                      <div className="flex-col relative  w-[289px] h-[221px] border-[#393939] border-[3px] rounded-lg">
-                        <img
-                          src="/Team/image8.png"
-                          alt="Team member"
-                          className="rounded-lg absolute z-0 border-[#393939]"
-                        />
-                        <div className="absolute bottom-7 left-2 right-0 z-10 text-start">
-                          <div className="font-medium text-white">
-                            Vansh Baghel
-                          </div>
-                          <div className="text-sm text-transparent bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                            Lead
-                          </div>
-                        </div>
-                      </div>
-                      <div className="text-sm mx-auto text-transparent justify-center  text-center w-[200px] h-[54px] bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                        “ Growth is painful, but what is worse is staying the
-                        same.“
-                      </div>
-                      <div className="grid grid-cols-5 gap-[14px] w-[158px] h-[24px] mx-auto  items-center">
-                        <div className="">
-                          <img src="Team/Vectorgithub.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorinstagram.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/VectorX.svg"></img>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-              {/* Add more cards as needed */}
-            </div>
-          </TabsContent>
-          <TabsContent value="Press" className="fle items-center  rounded-lg ">
-            <div className="grid grid-cols-3 gap-10 ml-14 mt-36 mr-14 mb-8">
-              {teamData.map((team) => (
-                <Card
-                  x-chunk="dashboard-01-chunk-3"
-                  key={team}
-                  className="h-[436px] w-[346px] bg-[#03050C]"
-                >
-                  <CardContent>
-                    <div className="grid gap-9 pt-[22px] pr-[25px] pl-[25px] pb-[22px] justify-center">
-                      <div className="flex-col relative  w-[289px] h-[221px] border-[#393939] border-[3px] rounded-lg">
-                        <img
-                          src="/Team/image8.png"
-                          alt="Team member"
-                          className="rounded-lg absolute z-0 border-[#393939]"
-                        />
-                        <div className="absolute bottom-7 left-2 right-0 z-10 text-start">
-                          <div className="font-medium text-white">
-                            Vansh Baghel
-                          </div>
-                          <div className="text-sm text-transparent bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                            Lead
-                          </div>
-                        </div>
-                      </div>
-                      <div className="text-sm mx-auto text-transparent justify-center  text-center w-[200px] h-[54px] bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                        “ Growth is painful, but what is worse is staying the
-                        same.“
-                      </div>
-                      <div className="grid grid-cols-5 gap-[14px] w-[158px] h-[24px] mx-auto  items-center">
-                        <div className="">
-                          <img src="Team/Vectorgithub.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorinstagram.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/VectorX.svg"></img>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-              {/* Add more cards as needed */}
-            </div>
-          </TabsContent>
-          <TabsContent
-            value="Outreach"
-            className="fle items-center  rounded-lg "
-          >
-            <div className="grid grid-cols-3 gap-10 ml-14 mt-36 mr-14 mb-8">
-              {teamData.map((team) => (
-                <Card
-                  x-chunk="dashboard-01-chunk-3"
-                  key={team}
-                  className="h-[436px] w-[346px] bg-[#03050C]"
-                >
-                  <CardContent>
-                    <div className="grid gap-9 pt-[22px] pr-[25px] pl-[25px] pb-[22px] justify-center">
-                      <div className="flex-col relative  w-[289px] h-[221px] border-[#393939] border-[3px] rounded-lg">
-                        <img
-                          src="/Team/image8.png"
-                          alt="Team member"
-                          className="rounded-lg absolute z-0 border-[#393939]"
-                        />
-                        <div className="absolute bottom-7 left-2 right-0 z-10 text-start">
-                          <div className="font-medium text-white">
-                            Vansh Baghel
-                          </div>
-                          <div className="text-sm text-transparent bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                            Lead
-                          </div>
-                        </div>
-                      </div>
-                      <div className="text-sm mx-auto text-transparent justify-center  text-center w-[200px] h-[54px] bg-clip-text bg-gradient-to-b from-45% from-[#dfdede] to-[#3a3a3a]">
-                        “ Growth is painful, but what is worse is staying the
-                        same.“
-                      </div>
-                      <div className="grid grid-cols-5 gap-[14px] w-[158px] h-[24px] mx-auto  items-center">
-                        <div className="">
-                          <img src="Team/Vectorgithub.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorinstagram.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/Vectorseperate.svg"></img>
-                        </div>
-                        <div className="">
-                          <img src="Team/VectorX.svg"></img>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-              {/* Add more cards as needed */}
-            </div>
-          </TabsContent>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+          ))}
         </Tabs>
       </div>
     </div>
